@@ -4,10 +4,16 @@ import { Link } from 'react-router-dom';
 const Projects = () => {
     return (
         <div className='mt-5'>
-            
+
+{/* https://i.ibb.co/HKWmNBv/brainblogs.png
+https://i.ibb.co/gTCpfLr/snapnews.png
+https://i.ibb.co/BC9tWQH/cardoctor.png
+https://i.ibb.co/MB9QYXq/aura.png
+ */}
+
             {/* project 1  */}
             <div className='bg-[#e0dfdb] p-5 flex gap-5'>
-                <img className='border-2 border-black rounded-3xl w-[60%]' src="/public/projects/cardoctor.png" alt="" />
+                <img className='border-2 border-black rounded-3xl w-[60%]' src="https://i.ibb.co/BC9tWQH/cardoctor.png" alt="" />
                 <div className='p-10'>
                     <p className='font-ob-600 text-7xl'>Car Doctor</p>
                    
@@ -30,7 +36,7 @@ const Projects = () => {
 
             {/* project 1  */}
             <div className='bg-[#e0dfdb] p-5 flex gap-5 mt-2'>
-                <img className='border-2 border-black rounded-3xl w-[60%]' src="/public/projects/aura.png" alt="" />
+                <img className='border-2 border-black rounded-3xl w-[60%]' src="https://i.ibb.co/MB9QYXq/aura.png" alt="" />
                 <div className='p-10'>
                     <p className='font-ob-600 text-7xl'>Aura</p>
                    
