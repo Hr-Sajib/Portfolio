@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.underline-animation {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .underline-animation::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px; /* Adjust as needed */
+    left: 0;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+    transform-origin: center; /* Change transform origin to center */
+  }
+  
+  .underline-animation:hover::before {
+    transform: scaleX(1);
+  }
+
+
+
+.font-ob {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.font-ob-400 {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-ob-900 {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+.font-ob-600 {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-rm {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #901308, #100701);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
