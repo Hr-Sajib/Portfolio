@@ -1,12 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Aos from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
 
 const Skills = () => {
+
+    useEffect(() => {
+        Aos.init();
+    }, []);
+
     return (
 
-        <div className='flex justify-between gap-2'>
+        <div data-aos="fade-up" className='flex justify-between gap-2'>
             {/* front end  */}
-            <div className='w-[33%] mt-[25px]'>
+            <div data-aos="fade-right" className='w-[33%] mt-[25px]'>
                 <div className='    bg-[#e0dfdb] p-10'>
                     <p className='font-ob-600 text-4xl'>Front-End</p>
                     {/* cards  */}
@@ -58,7 +67,7 @@ const Skills = () => {
             </div>
            
             {/* back end  */}
-            <div className='w-[33%] mt-[25px]'>
+            <div  className='w-[33%] mt-[25px]'>
                 <div className='    bg-[#e0dfdb] p-10'>
                     <p className='font-ob-600 text-4xl'>Back-End</p>
                     {/* cards  */}
@@ -94,7 +103,7 @@ const Skills = () => {
             </div>
            
             {/* others  */}
-            <div className=' mt-[25px] w-[33%]'>
+            <div data-aos="fade-left" className=' mt-[25px] w-[33%]'>
                 <div className='    bg-[#e0dfdb] p-10'>
                     <p className='font-ob-600 text-4xl'>Others</p>
                     {/* cards  */}

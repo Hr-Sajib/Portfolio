@@ -1,22 +1,46 @@
 import { FaLocationPinLock } from "react-icons/fa6";
+import { RiFocus3Line } from "react-icons/ri";
+import { Link } from "react-router-dom";
+import { useTypewriter, Typewriter } from 'react-simple-typewriter';
+import Aos from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const Profile = () => {
+
+    useEffect(() => {
+        Aos.init();
+    }, []);
+
+
     return (
-        <div className="bg-[#e0dfdb] mt-[25px]">
-            <div className=' p-5'>
+        <div data-aos="fade-up"  className="bg-[#e0dfdb] mt-[25px]">
+            <div  className=' p-5'>
                 <div className='flex gap-3 items-center'>
                     <img className='h-[90px] w-[90px] border-[5px] border-black object-cover rounded-full' src="https://i.ibb.co/Y30rYqw/self.jpg" alt="" />
                     <p className='font-ob-600 text-[50px]'>Harun Or Rashid <span className=' border-[8px] border-gray-500 rounded-2xl'>SAJIB</span></p>
 
                 </div>                
                 
-                <p className='font-ob-900  text-[100px] text-gradient inline'>WEB DEVELOPER</p>
-                <p className='font-ob-900  text-xl  inline'>FRONT END</p>
+                <div data-aos="zoom-out">
+                <p  className='font-ob-900  text-[100px] text-gradient inline'>WEB DEVELOPER</p>
+                </div>
+                <div className="flex items-center">
+                    <p className='font-ob-900  text-xl '>FRONT END</p><RiFocus3Line className="text-red-900 text-4xl"/><p className="font-ob-900  text-xl ">FOCUS</p>
+                </div>
 
             </div>
 
-            <div className='border-t-2 border-white flex items-center pl-5 p-3'>
-                <FaLocationPinLock className="text-3xl"/> <p className='font-ob-600 text-xl ml-2'>Dhaka, Bangladesh  /  I am open for remote jobs</p>
+            <div data-aos="fade-left" className='border-t-2 border-white flex items-center pl-5 p-3'>
+                <FaLocationPinLock className="text-3xl"/> <p className='font-ob-600 text-xl ml-2'>Dhaka, Bangladesh  /  <Typewriter
+                                words={['I am open for remote jobs']}
+                                loop={100}
+                                cursor
+                                cursorStyle=' >'
+                                typeSpeed={100}
+                                deleteSpeed={10}
+                                delaySpeed={1000}
+                            /></p>
             </div>
 
             <div className='flex border-t-[5px] border-white font-ob'>
@@ -31,7 +55,7 @@ const Profile = () => {
 
 
                         <div className="flex gap-3 mt-5">
-                            <div className="h-[160px] w-[160px] ">
+                            <div  className="h-[160px] w-[160px] ">
                                 <div className=" border-black border  w-[160px] flex items-center justify-center rounded-t-lg bg-white">
                                     <img className="h-[110px] p-2" src="https://i.ibb.co/6FNc9jr/ecom.png" alt="" />
                                 </div>
@@ -72,9 +96,11 @@ const Profile = () => {
                                 </div>
                             </div>
                          </div>
-                         <div className="flex justify-end">
-                            <button className="bg-blue-950 hover:bg-slate-700 px-2 text-xl text-white rounded-md mt-5 mr-3">Download Resume</button>
-                            <button className="bg-black hover:bg-slate-700 px-2 text-xl text-white rounded-md mt-5 mr-3">Check Projects <span className='arrow'>➔</span></button>
+                         <div className="flex justify-end gap-2 mt-5 items-center">
+                            <a href="/hrsajib_resume.pdf" download>
+                                <button className="bg-gradient-to-l from-red-800 to-black text-white hover:bg-blue-900 text-xl px-1 rounded-md">Download Resume</button>
+                            </a> 
+                            <Link to='/projects'><button className="bg-black hover:bg-slate-700 px-2 text-xl text-white rounded-md">Check Projects <span className='arrow'>➔</span></button></Link>
                          </div>
                     </div>
                     

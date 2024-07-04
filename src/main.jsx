@@ -6,10 +6,12 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Rootpage from './components/Rootpage';
-import Profile from './components/profile/Profile';
 import Profilepage from './components/profile/Profilepage';
 import Skills from './components/skills/Skills';
 import Projects from './components/projects/Projects';
+import Blogs from './components/blogs/Blogs';
+import Contacts from './components/contacts/Contacts';
+import Resume from './components/resume/Resume';
 
 
 const router = createBrowserRouter([
@@ -28,6 +30,18 @@ const router = createBrowserRouter([
       {
         path: "/projects",
         element: <Projects/>,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs/>,
+      },
+      {
+        path: "/contacts",
+        element: <Contacts/>,
+      },
+      {
+        path: "/resume",
+        element: <Resume/>,
       },
     ]
   },
