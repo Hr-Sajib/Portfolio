@@ -65,3 +65,19 @@
     -webkit-text-fill-color: transparent;
   }
   
+
+  @keyframes fadeOutLeft {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  }
+  
+  .fade-out-left {
+    animation: fadeOutLeft 0.5s forwards;
+  }
+  

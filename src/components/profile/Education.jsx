@@ -1,8 +1,14 @@
+import Aos from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const Education = () => {
+    useEffect(() => {
+        Aos.init();
+    }, []);
     return (
-        <div>
-            <div className='my-20 border border-black w-[50%] ml-10 rounded-xl'>
+        <div data-aos="zoom-in">
+            <div className='lg:my-20 my-5 border border-black lg:w-[50%] lg:mx-0 mx-2 lg:ml-10 rounded-xl'>
                 <div className='flex items-center gap-2 pl-3 py-2'>
                     <img className='h-10' src="/eduIcon.png" alt="" />
                     <p className='text-2xl font-bold'>Formal Education</p>
