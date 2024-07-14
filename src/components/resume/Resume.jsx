@@ -92,9 +92,10 @@ const Resume = () => {
             </div>
 
             <div className='flex justify-end mr-5 lg:mt-10 mt-2'>
-                <a href="/hrsajib_resume.pdf" download>
-                    <button className="bg-black text-white hover:bg-gray-700 text-2xl p-1 rounded-md">Download Resume</button>
-                </a>            
+            <a href={`${process.env.PUBLIC_URL}/hrsajib_resume.pdf`} download>
+    <button className="bg-black text-white hover:bg-gray-700 text-2xl p-1 rounded-md">Download Resume</button>
+</a>
+           
             </div>
         </div>
     );
