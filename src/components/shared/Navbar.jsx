@@ -21,11 +21,11 @@ const Navbar = () => {
 
     return (
         <div id='navbar' className='bg-[#bebdbc]'>
-            <div className='lg:border-0 border h-20 flex justify-between items-center lg:px-40 px-4 font-ob lg:mr-2'>
+            <div className='lg:border-0 border h-20 flex justify-between items-center lg:px-[5%] px-4 font-ob lg:mr-2'>
                 {/* Icon Div */}
                 <div className='flex items-center gap-1'>
                     {/* Options Icon */}
-                    <div onClick={() => {setDropDown(!dropDown)}}>
+                    <div className='lg:hidden' onClick={() => {setDropDown(!dropDown)}}>
                     {!dropDown ? (
                         <div className="ml-5 mr-2 transition-transform duration-500">
                             <p className='rotate-90 text-3xl h-3 transition-transform duration-500'>|</p>
@@ -38,20 +38,7 @@ const Navbar = () => {
                         </div>
                     )}
                     </div>
-                    {/* <div onClick={() => setDropDown(!dropDown)}>
-                        {
-                            dropDown ?
-                                <img className='lg:hidden h-8' src="https://i.ibb.co/Dzgdh1N/cross.png" alt="" />
-                                :
-                                // <img className='lg:hidden h-8' src="https://i.ibb.co/JjnzjFs/opt.png" alt="" />
-                                <div className='ml-5 mr-2'>
-                                    <p className='rotate-[45deg] text-3xl h-3'>|</p>
-                                    <p className='-rotate-[45deg] relative bottom-[12px] right-[17px] text-3xl h-3'>|</p>
-                                </div>
-
-                        }
-                    </div> */}
-
+                    
                     <Link to="/">
                         <div className='flex items-center'>
                             {/* <img className='lg:h-10 hidden lg:flex h-12 lg:border-0 border-2 border-red-800 rounded-xl lg:p-0 p-1' src="https://i.ibb.co/GCG87PR/181806.png" alt="" /> */}
